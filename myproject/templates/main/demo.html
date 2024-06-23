@@ -9,30 +9,28 @@
    ================================================== -->
    <meta charset="utf-8">
 	<title>Keep It Simple.</title>
-	<meta name="description" content="">  
-	<meta name="author" content="">
-
-	<!-- mobile specific metas
+   <!-- mobile specific metas
    ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- CSS
-    ================================================== -->
-   <link rel="stylesheet" href="css/default.css">
-	<link rel="stylesheet" href="css/layout.css">  
-	<link rel="stylesheet" href="css/media-queries.css">   
+   <!-- CSS
+   ================================================== -->
+   {% load static %}
+   <link rel="stylesheet" href="{% static 'main/css/default.css' %}">
+	<link rel="stylesheet" href="{% static 'main/css/layout.css' %}">  
+	<link rel="stylesheet" href="{% static 'main/css/media-queries.css' %}">   
 
    <!-- Script
    ================================================== -->
-	<script src="js/modernizr.js"></script>
+	<script src="{% static 'main/js/modernizr.js' %}"></script>
 
    <!-- Favicons
 	================================================== -->
-	<link rel="shortcut icon" href="favicon.png" >
+	<link rel="shortcut icon" href="{% static 'main/images/favicon.png' %}" >
 
 </head>
 
-<body>
+<body class="page">
 
    <!-- Header
    ================================================== -->
@@ -42,7 +40,7 @@
 
    		<div class="header-content twelve columns">
 
-		      <h1 id="logo-text"><a href="index.html" title="">Keep It Simple.</a></h1>
+		      <h1 id="logo-text"><a href="{% url "index" %}" title="">Keep It Simple.</a></h1>
 				<p id="intro">Put your awesome slogan here...</p>
 
 			</div>			
@@ -56,25 +54,25 @@
 
 	   	<div class="row">    		            
 
-			   	<ul id="nav" class="nav">
-			      	<li><a href="index.html">Home</a></li>
-			      	<li class="has-children"><a href="#">Dropdown</a>
-	                  <ul>
-	                     <li><a href="#">Submenu 01</a></li>
-	                     <li><a href="#">Submenu 02</a></li>
-	                     <li><a href="#">Submenu 03</a></li>
-	                  </ul>
-	               </li>
-	               <li class="current"><a href="demo.html">Demo</a></li>	
-	               <li><a href="archives.html">Archives</a></li>
-			      	<li class="has-children"><a href="single.html">Blog</a>
-							<ul>
-	                     <li><a href="blog.html">Blog Entries</a></li>
-	                     <li><a href="single.html">Single Blog</a></li>	                     
-	                  </ul>
-			      	</li>		      	
-			      	<li><a href="page.html">Page</a></li>
-			   	</ul> <!-- end #nav -->			   	 
+            <ul id="nav" class="nav">
+               <li><a href="{% url "index" %}">Home</a></li>
+               <li class="has-children"><a href="#">Dropdown</a>
+               <ul>
+                  <li><a href="#">Submenu 01</a></li>
+                  <li><a href="#">Submenu 02</a></li>
+                  <li><a href="#">Submenu 03</a></li>
+               </ul>
+             </li>
+             <li class="current"><a href="{% url "demo" %}">Demo</a></li>	
+             <li><a href="{% url "archives" %}">Archives</a></li>
+               <li class="has-children"><a href="{% url "single" %}">Blog</a>
+                    <ul>
+                  <li><a href="{% url "blog" %}">Blog Entries</a></li>
+                  <li><a href="{% url "single" %}">Single Blog</a></li>	                     
+               </ul>
+               </li>		      	
+               <li><a href="{% url "page" %}">Page</a></li>
+             </ul> <!-- end #nav -->	   	 
 
 	   	</div> 
 
@@ -109,7 +107,7 @@
 
             <h3>Paragraph and Image</h3>
 
-            <p><a href="#"><img width="120" height="120" class="pull-left" alt="sample-image" src="images/sample-image.jpg"></a>
+            <p><a href="#"><img width="120" height="120" class="pull-left" alt="sample-image" src="{% static 'main/images/sample-image.jpg' %}"></a>
   			   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.
   			   Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu
   			   posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum
@@ -312,7 +310,7 @@
 
       </div> <!-- Row End-->
 
-      <!-- <div class="row add-bottom">
+      <div class="row add-bottom">
 
          <div class="twelve columns add-bottom">
 
@@ -372,7 +370,7 @@
 
          <hr />
 
-      </div> -->    <!-- Row End-->
+      </div>    <!-- Row End-->
 
       <div class="row">
 
@@ -540,14 +538,14 @@
             <h3>Photostream</h3>
             
             <ul class="photostream group">
-               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
-               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
-               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
-               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
-               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
-               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
-               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
-               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
+               <li><a href="#"><img alt="thumbnail" src="{% static 'main/images/thumb.jpg' %}"></a></li>
+               <li><a href="#"><img alt="thumbnail" src="{% static 'main/images/thumb.jpg' %}"></a></li>
+               <li><a href="#"><img alt="thumbnail" src="{% static 'main/images/thumb.jpg' %}"></a></li>
+               <li><a href="#"><img alt="thumbnail" src="{% static 'main/images/thumb.jpg' %}"></a></li>
+               <li><a href="#"><img alt="thumbnail" src="{% static 'main/images/thumb.jpg' %}"></a></li>
+               <li><a href="#"><img alt="thumbnail" src="{% static 'main/images/thumb.jpg' %}"></a></li>
+               <li><a href="#"><img alt="thumbnail" src="{% static 'main/images/thumb.jpg' %}"></a></li>
+               <li><a href="#"><img alt="thumbnail" src="{% static 'main/images/thumb.jpg' %}"></a></li>
             </ul>           
 
          </div>
@@ -556,10 +554,10 @@
             <h3 class="social">Navigate</h3>
 
             <ul class="navigate group">
-               <li><a href="#">Home</a></li>
-               <li><a href="#">Blog</a></li>
-               <li><a href="#">Demo</a></li>
-               <li><a href="#">Archives</a></li>
+               <li><a href="{% url "index" %}">Home</a></li>
+               <li><a href="{% url "blog" %}">Blog</a></li>
+               <li><a href="{% url "demo" %}">Demo</a></li>
+               <li><a href="{% url "archives" %}">Archives</a></li>
                <li><a href="#">About</a></li>
             </ul>
          </div>
@@ -576,9 +574,11 @@
    <!-- Java Script
    ================================================== -->
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>  
-   <script src="js/main.js"></script>
+   <script>
+       window.jQuery || document.write('<script src="{% static "main/js/jquery-1.10.2.min.js" %}"><\/script>')
+   </script>
+   <script type="text/javascript" src="{% static 'main/js/jquery-migrate-1.2.1.min.js' %}"></script>  
+   <script src="{% static 'main/js/main.js' %}"></script>
 
 </body>
 

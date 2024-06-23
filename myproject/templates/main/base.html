@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
@@ -15,7 +16,6 @@
 
    <!-- CSS
    ================================================== -->
-   {% load static %}
    <link rel="stylesheet" href="{% static 'main/css/default.css' %}">
 	<link rel="stylesheet" href="{% static 'main/css/layout.css' %}">  
 	<link rel="stylesheet" href="{% static 'main/css/media-queries.css' %}">   
@@ -40,7 +40,7 @@
 
    		<div class="header-content twelve columns">
 
-		      <h1 id="logo-text"><a href="index.html" title="">Keep It Simple.</a></h1>
+		      <h1 id="logo-text"><a href="{% url "index" %}" title="">Keep It Simple.</a></h1>
 				<p id="intro">Put your awesome slogan here...</p>
 
 			</div>			
@@ -112,7 +112,7 @@
                <h3>Post Tags.</h3>
 
                <div class="tagcloud group">
-                	<a href="#">Corporate</a>
+                  <a href="#">Corporate</a>
                   <a href="#">Onepage</a>
                   <a href="#">Agency</a>
                   <a href="#">Multipurpose</a>
@@ -194,10 +194,10 @@
             <h3 class="social">Navigate</h3>
 
             <ul class="navigate group">
-               <li><a href="#">Home</a></li>
-               <li><a href="#">Blog</a></li>
-               <li><a href="#">Demo</a></li>
-               <li><a href="#">Archives</a></li>
+               <li><a href="{% url "index" %}">Home</a></li>
+               <li><a href="{% url "blog" %}">Blog</a></li>
+               <li><a href="{% url "demo" %}">Demo</a></li>
+               <li><a href="{% url "archives" %}">Archives</a></li>
                <li><a href="#">About</a></li>
             </ul>
          </div>
