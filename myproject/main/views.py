@@ -94,3 +94,6 @@ def wordpress(request):
 
 def ghost(request):
     return render(request, 'main/ghost.html')
+
+def joomla(request):
+    return render(request, 'main/joomla.html')
