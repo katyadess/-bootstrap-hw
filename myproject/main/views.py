@@ -91,3 +91,6 @@ def single_five(request):
 
 def wordpress(request):
     return render(request, 'main/wordpress.html')
+
+def ghost(request):
+    return render(request, 'main/ghost.html')

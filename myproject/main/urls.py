@@ -17,5 +17,6 @@ urlpatterns = [
     path('about', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
     path('faq', views.faq, name='faq'),
-    path('wordpress/', views.wordpress, name='wp')
+    path('wordpress/', views.wordpress, name='wp'),
+    path('ghost/', views.ghost, name='ghost'),
 ]
