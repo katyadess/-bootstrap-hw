@@ -6,7 +6,7 @@ def archives(request):
     return render(request, 'main/archives.html')
 
 
-def blog(request):
+def blog_july(request):
     return render(request, 'main/blog.html')
 
 
@@ -67,3 +67,7 @@ def faq(request):
 
     context = {'faqs': faqs}
     return render(request, 'main/faq.html', context)
+
+
+def blog_august(request):
+    return render(request, 'main/blog_august.html')

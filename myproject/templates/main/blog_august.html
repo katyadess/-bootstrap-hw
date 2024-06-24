@@ -1,0 +1,86 @@
+{% extends "main/base.html" %}
+
+{% block navs %}
+<ul id="nav" class="nav">
+	<li><a href="{% url "index" %}">Home</a></li>
+	<li class="has-children"><a href="{% url "about" %}">About Us</a>
+	<ul>
+		<li><a href="{% url "contact" %}">Contact Us</a></li>
+		<li><a href="{% url "faq" %}">FAQ</a></li>
+	</ul>
+ </li>
+ <li><a href="{% url "demo" %}">Demo</a></li>	
+ <li><a href="{% url "archives" %}">Archives</a></li>
+	<li class="has-children current"><a href="{% url "single" %}">Blog</a>
+		  <ul>
+	   <li><a href="{% url "blog" %}">Blog Entries</a></li>
+	   <li><a href="{% url "single" %}">Single Blog</a></li>	                     
+	</ul>
+	</li>		      	
+	<li><a href="{% url "page" %}">Page</a></li>
+ </ul> <!-- end #nav -->	
+{% endblock navs %}
+
+{% block content %}
+
+<article class="entry">
+
+	<header class="entry-header">
+
+		<h2 class="entry-title">
+			<a href="{% url "single" %}" title="">Hey, We Love Roboto!</a>
+		</h2> 				 
+	
+		<div class="entry-meta">
+			<ul>
+				<li>August 29, 2014</li>
+				<span class="meta-sep">&bull;</span>								
+				<li><a href="#" title="" rel="category tag">Magento</a></li>
+				<span class="meta-sep">&bull;</span>
+				<li>Jane Smith</li>
+			</ul>
+		</div> 
+		
+	</header> 
+	
+	<div class="entry-content">
+        <p>Labore consectetur ipsum et nisi ea sit incididunt consectetur laboris qui reprehenderit. Ut veniam eiusmod est sint id cupidatat aliqua tempor cillum anim dolor. Proident mollit cillum aliqua exercitation non adipisicing magna tempor. Ad voluptate minim consectetur fugiat minim mollit consectetur et reprehenderit veniam adipisicing. Aliquip fugiat sint consequat labore consectetur ut aute mollit veniam aute laboris veniam amet. Consectetur non cillum laboris cillum et sunt sunt excepteur in commodo est. Ut commodo fugiat consequat ut ex elit cillum cillum anim magna.
+        </p>
+    </div> 
+
+</article> <!-- end entry -->
+
+<article class="entry">
+
+	<header class="entry-header">
+
+		<h2 class="entry-title">
+			<a href="{% url "single" %}" title="">Simplicity and Elegance in Design</a>
+		</h2> 				 
+	
+		<div class="entry-meta">
+			<ul>
+				<li>August 15, 2014</li>
+				<span class="meta-sep">&bull;</span>								
+				<li><a href="#" title="" rel="category tag">Magento</a></li>
+				<span class="meta-sep">&bull;</span>
+				<li>Sakura Haruno</li>
+			</ul>
+		</div> 
+		
+	</header> 
+	
+	<div class="entry-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div> 
+
+</article> <!-- end entry -->
+
+<div class="pagenav">
+	<p>
+	<a rel="prev" href="{% url "blog" %}">Prev</a>   	
+	<a rel="next" href="#">Next</a>     		
+	</p>
+</div> 	
+
+{% endblock content %}
