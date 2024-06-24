@@ -6,12 +6,12 @@
 	<li class="has-children current"><a href="{% url "about" %}">About Us</a>
 	<ul>
 	   <li><a href="{% url "contact" %}">Contact Us</a></li>
-	   <li><a href="#">FAQ</a></li>
+	   <li><a href="{% url "faq" %}">FAQ</a></li>
 	</ul>
  </li>
  <li><a href="{% url "demo" %}">Demo</a></li>	
  <li><a href="{% url "archives" %}">Archives</a></li>
-	<li class="has-children"><a href="{% url "single" %}">Blog</a>
+ <li class="has-children"><a href="{% url "single" %}">Blog</a>
 		  <ul>
 	   <li><a href="{% url "blog" %}">Blog Entries</a></li>
 	   <li><a href="{% url "single" %}">Single Blog</a></li>	                     
@@ -64,8 +64,9 @@
 	
 	<div class="entry-content">
         <p>
-            Let's stay connected. Stay up to date with new template releases and what is happening in styleshout. 
-            Follow us on social media. You can contact us <a href="{% url "contact" %}">HERE</a>.
+            Stay connected with us to keep up to date with new template releases and the latest news from Styleshout. 
+            Follow us on social media for updates. If you have any questions or need to send us a message, please reach out <a href="{% url "contact" %}">HERE</a>. 
+            We strive to respond as quickly as possible.
         </p>
     </div> 
 
@@ -85,7 +86,7 @@
 	<div class="entry-content">
         <p>
             Here you can find answers to common questions about our services 
-            and policies. Click on the link below to visit our detailed FAQ page. <a href="#">Visit our FAQ page</a>.
+            and policies. Click on the link below to visit our detailed FAQ page. <a href="{% url "faq" %}">Visit our FAQ page</a>.
         </p>
         <h5>In our FAQ, you will find information on:</h5>
         <ul>

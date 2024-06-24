@@ -6,7 +6,7 @@
 	<li class="has-children current"><a href="{% url "about" %}">About Us</a>
 	<ul>
 	   <li><a href="{% url "contact" %}">Contact Us</a></li>
-	   <li><a href="#">FAQ</a></li>
+       <li><a href="{% url "faq" %}">FAQ</a></li>
 	</ul>
  </li>
  <li><a href="{% url "demo" %}">Demo</a></li>	
@@ -34,9 +34,10 @@
 	</header> 
 	
 	<div class="entry-content">
-        <p>To contact us, send your message to contact@styleshout.com or use the contact form below. 
-            Also, before contacting us, try first visiting our <a href="#">Frequently Asked Questions</a> (FAQs) page. 
-            You may find the information you are looking for there.</p>
+        <p>To contact us, send your message or question to contact@styleshout.com or use the contact form below. 
+            Also, before contacting us, try first visiting our <a href="{% url "faq" %}">Frequently Asked Questions</a> (FAQs) page. 
+            You may find the information you are looking for there.
+        </p>
     </div> 
 
 

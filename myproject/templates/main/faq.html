@@ -1,0 +1,58 @@
+{% extends "main/base.html" %}
+{% block navs %}
+<ul id="nav" class="nav">
+	<li><a href="{% url "index" %}">Home</a></li>
+	<li class="has-children current"><a href="{% url "about" %}">About Us</a>
+	<ul>
+	   <li><a href="{% url "contact" %}">Contact Us</a></li>
+	   <li><a href="{% url "faq" %}">FAQ</a></li>
+	</ul>
+ </li>
+ <li><a href="{% url "demo" %}">Demo</a></li>	
+ <li><a href="{% url "archives" %}">Archives</a></li>
+	<li class="has-children"><a href="{% url "single" %}">Blog</a>
+		  <ul>
+	   <li><a href="{% url "blog" %}">Blog Entries</a></li>
+	   <li><a href="{% url "single" %}">Single Blog</a></li>	                     
+	</ul>
+	</li>		      	
+	<li><a href="{% url "page" %}">Page</a></li>
+ </ul> <!-- end #nav -->
+{% endblock navs %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static "main/css/accordion.css" %}">
+<h1>Frequently Asked Questions</h1>
+
+<ul id="accordion">
+    {% for faq in faqs %}
+        <li>
+            <label for="faq-{{ forloop.counter }}">{{ faq.question }} <span><i class="bi bi-chevron-down"></i></span></label>
+            <input type="radio" name="accordion" id="faq-{{ forloop.counter }}">
+
+            <div class="answer">
+                <p>{{ faq.answer }}</p>
+            </div>
+        </li>
+    {% endfor %}
+</ul>
+
+<article class="entry">
+
+	<header class="entry-header">
+
+		<h2 class="entry-title">
+			Contact Us.
+		</h2> 				 
+		
+	</header> 
+	
+	<div class="entry-content">
+        <p>In case, you have a question not answered by the list above, 
+            feel free to <a href="{% url "contact" %}">contact us</a>. Our email address is: contact@styleshout.com.</p>
+    </div> 
+
+
+</article> <!-- end entry -->
+{% endblock content %}
+
