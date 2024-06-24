@@ -58,7 +58,7 @@
                <li><a href="{% url "index" %}">Home</a></li>
                <li class="has-children"><a href="{% url "about" %}">About Us</a>
                <ul>
-                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="{% url "contact" %}">Contact Us</a></li>
 	               <li><a href="#">FAQ</a></li>
                </ul>
              </li>
@@ -557,7 +557,7 @@
                <li><a href="{% url "blog" %}">Blog</a></li>
                <li><a href="{% url "demo" %}">Demo</a></li>
                <li><a href="{% url "archives" %}">Archives</a></li>
-               <li><a href="#">About</a></li>
+               <li><a href="{% url "about" %}">About</a></li>
             </ul>
          </div>
 

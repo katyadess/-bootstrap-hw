@@ -5,7 +5,7 @@
 	<li><a href="{% url "index" %}">Home</a></li>
 	<li class="has-children"><a href="{% url "about" %}">About Us</a>
 	<ul>
-		<li><a href="#">Contact Us</a></li>
+		<li><a href="{% url "contact" %}">Contact Us</a></li>
 		<li><a href="#">FAQ</a></li>
 	</ul>
  </li>
@@ -28,7 +28,7 @@
 	<header class="entry-header">
 
 		<h2 class="entry-title">
-			<a href="single.html" title="">Hey, We Love Open Sans!</a>
+			<a href="{% url "single" %}" title="">Hey, We Love Open Sans!</a>
 		</h2> 				 
 	
 		<div class="entry-meta">
@@ -54,7 +54,7 @@
 	<header class="entry-header">
 
 		<h2 class="entry-title">
-			<a href="single.html" title="">We All Love Good Typography.</a>
+			<a href="{% url "single" %}" title="">We All Love Good Typography.</a>
 		</h2> 				 
 	
 		<div class="entry-meta">
@@ -83,7 +83,7 @@
 	<header class="entry-header">
 
 		<h2 class="entry-title">
-			<a href="single.html" title="">White Space Everywhere.</a>
+			<a href="{% url "single" %}" title="">White Space Everywhere.</a>
 		</h2> 				 
 	
 		<div class="entry-meta">
@@ -112,7 +112,7 @@
 	<header class="entry-header">
 
 		<h2 class="entry-title">
-			<a href="single.html" title="">Simple And Minimalist Designs.</a>
+			<a href="{% url "single" %}" title="">Simple And Minimalist Designs.</a>
 		</h2> 				 
 	
 		<div class="entry-meta">

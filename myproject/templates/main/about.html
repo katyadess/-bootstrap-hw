@@ -5,7 +5,7 @@
 	<li><a href="{% url "index" %}">Home</a></li>
 	<li class="has-children current"><a href="{% url "about" %}">About Us</a>
 	<ul>
-	   <li><a href="#">Contact Us</a></li>
+	   <li><a href="{% url "contact" %}">Contact Us</a></li>
 	   <li><a href="#">FAQ</a></li>
 	</ul>
  </li>
@@ -65,7 +65,7 @@
 	<div class="entry-content">
         <p>
             Let's stay connected. Stay up to date with new template releases and what is happening in styleshout. 
-            Follow us on social media. You can contact us <a href="#">HERE</a>.
+            Follow us on social media. You can contact us <a href="{% url "contact" %}">HERE</a>.
         </p>
     </div> 
 

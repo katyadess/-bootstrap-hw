@@ -16,6 +16,7 @@
 
    <!-- CSS
    ================================================== -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
    <link rel="stylesheet" href="{% static 'main/css/default.css' %}">
 	<link rel="stylesheet" href="{% static 'main/css/layout.css' %}">  
 	<link rel="stylesheet" href="{% static 'main/css/media-queries.css' %}">   
@@ -198,7 +199,7 @@
                <li><a href="{% url "blog" %}">Blog</a></li>
                <li><a href="{% url "demo" %}">Demo</a></li>
                <li><a href="{% url "archives" %}">Archives</a></li>
-               <li><a href="#">About</a></li>
+               <li><a href="{% url "about" %}">About</a></li>
             </ul>
          </div>
 
