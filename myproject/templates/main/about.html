@@ -1,0 +1,103 @@
+{% extends "main/base.html" %}
+
+{% block navs %}
+<ul id="nav" class="nav">
+	<li><a href="{% url "index" %}">Home</a></li>
+	<li class="has-children current"><a href="{% url "about" %}">About Us</a>
+	<ul>
+	   <li><a href="#">Contact Us</a></li>
+	   <li><a href="#">FAQ</a></li>
+	</ul>
+ </li>
+ <li><a href="{% url "demo" %}">Demo</a></li>	
+ <li><a href="{% url "archives" %}">Archives</a></li>
+	<li class="has-children"><a href="{% url "single" %}">Blog</a>
+		  <ul>
+	   <li><a href="{% url "blog" %}">Blog Entries</a></li>
+	   <li><a href="{% url "single" %}">Single Blog</a></li>	                     
+	</ul>
+	</li>		      	
+	<li><a href="{% url "page" %}">Page</a></li>
+ </ul> <!-- end #nav -->
+{% endblock navs %}
+
+{% block content %}
+<article class="entry">
+
+	<header class="entry-header">
+
+		<h2 class="entry-title">
+			About Us
+		</h2> 				 
+		
+	</header> 
+	
+	<div class="entry-content">
+        <p>We Craft Simple and Modern Free Responsive Website Templates.
+            We offer a collection of modern and minimal website templates
+            that can help you create simple and eye-catching websites
+            quickly and easily. And best of all, they're completely free!
+        </p>
+    </div> 
+
+	<div class="entry-content">
+        <p>We are passionate about learning new things about CSS, HTML, and UI design 
+            and applying that knowledge to create templates that not only look great but also function well. 
+            We believe in the philosophy of "less is more" and "simplicity is key," 
+            which is reflected in our simple and minimalist designs, generous use of white space, and clean web typography.
+        </p>
+    </div> 
+
+
+
+</article> 
+
+<article class="entry">
+
+	<header class="entry-header">
+
+		<h2 class="entry-title">
+			Contact Us
+		</h2> 				 
+		
+	</header> 
+	
+	<div class="entry-content">
+        <p>
+            Let's stay connected. Stay up to date with new template releases and what is happening in styleshout. 
+            Follow us on social media. You can contact us <a href="#">HERE</a>.
+        </p>
+    </div> 
+
+
+</article> 
+
+<article class="entry">
+
+	<header class="entry-header">
+
+		<h2 class="entry-title">
+			FAQ Page
+		</h2> 				 
+		
+	</header> 
+	
+	<div class="entry-content">
+        <p>
+            Here you can find answers to common questions about our services 
+            and policies. Click on the link below to visit our detailed FAQ page. <a href="#">Visit our FAQ page</a>.
+        </p>
+        <h5>In our FAQ, you will find information on:</h5>
+        <ul>
+            <li>Contacting customer support</li>
+            <li>Service Policy</li>
+            <li>What is a template</li>
+            <li>How to use out templates</li>
+        </ul>
+    </div> 
+
+
+</article> <!-- end entry -->
+
+{% endblock content %}
+

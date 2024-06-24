@@ -24,3 +24,6 @@ def page(request):
 
 def single(request):
     return render(request, 'main/single.html')
+
+def about(request):
+    return render(request, 'main/about.html')
