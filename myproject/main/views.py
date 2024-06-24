@@ -71,3 +71,23 @@ def faq(request):
 
 def blog_august(request):
     return render(request, 'main/blog_august.html')
+
+
+def single_one(request):
+    return render(request, 'main/single_one.html')
+
+def single_two(request):
+    return render(request, 'main/single_two.html')
+
+def single_three(request):
+    return render(request, 'main/single_three.html')
+
+def single_four(request):
+    return render(request, 'main/single_four.html')
+
+def single_five(request):
+    return render(request, 'main/single_five.html')
+
+
+def wordpress(request):
+    return render(request, 'main/wordpress.html')
