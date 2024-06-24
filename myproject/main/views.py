@@ -97,3 +97,6 @@ def ghost(request):
 
 def joomla(request):
     return render(request, 'main/joomla.html')
+
+def magento(request):
+    return render(request, 'main/magento.html')

@@ -19,5 +19,6 @@ urlpatterns = [
     path('faq', views.faq, name='faq'),
     path('wordpress/', views.wordpress, name='wp'),
     path('ghost/', views.ghost, name='ghost'),
-    path('joomla/', views.joomla, name='joomla')
+    path('joomla/', views.joomla, name='joomla'),
+    path('magento/', views.magento, name='magento')
 ]
